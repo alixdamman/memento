@@ -18,7 +18,6 @@ print("import module `{}.py` and execute a print statement".format(__name__))
 def print_hello(firstname, name):
     print('hello', firstname, name, '!')
 
-def print_sys_path():
-    import sys
-    for mod in sys.path:
-        print(mod)
+def print_dir():
+    for elem in dir():
+        print(elem)
