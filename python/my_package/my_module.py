@@ -1,9 +1,4 @@
-"""Module documentation:
-
-package: {}
-module: {}
-path: {}
-""".format(__package__, __name__, __file__)
+"""Module documentation"""
 
 # restrict what is imported from this module using
 # from my_package.my_module import *
@@ -19,7 +14,7 @@ var = 'my_module_var'
 var2 = 'my_module_var2'
 
 #print statement
-print("import module `{}.py` from package {}".format(__name__, __package__))
+print("import module `{}` from package `{}`".format(__file__, __package__))
 
 # ========= #
 # functions #
