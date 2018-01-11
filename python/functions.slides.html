@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11854,8 +11854,7 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11863,8 +11862,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11880,8 +11878,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11889,8 +11886,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11923,7 +11919,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>0 2 4 6 8 </pre>
@@ -11934,8 +11932,7 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11970,7 +11967,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 2, 4, 6, 8]
@@ -11982,8 +11981,7 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12015,7 +12013,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>8 1
@@ -12027,8 +12027,7 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12036,8 +12035,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12045,12 +12043,11 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's assign a new value to a parameter inside the function et see what happens:</p>
+<p>Let's define a function to increment the value of a variable and see what happens when we use it:</p>
 
 </div>
 </div>
@@ -12060,16 +12057,16 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_wrong_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Add b to a&quot;&quot;&quot;</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside function:    &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:        &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the sum of </span><span class="si">{}</span><span class="s2"> and </span><span class="si">{}</span><span class="s2"> is:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside increment function:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
-<span class="n">add_wrong_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after function call:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">increment</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after calling increment:  &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12081,12 +12078,14 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>the sum of 5 and 3 is:
-inside function:     8
-after function call: 5
+<pre>at initialization:         0
+inside increment function: 1
+after calling increment:   0
 </pre>
 </div>
 </div>
@@ -12095,12 +12094,22 @@ after function call: 5
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's take a second look using the builtin function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>. This function returns the <em>identity</em> of an object. This is an integer which is guaranteed to be unique and constant for this object during its lifetime.</p>
+<h3 id="Python-namespaces">Python namespaces<a class="anchor-link" href="#Python-namespaces">&#182;</a></h3><p><img src="attachment:python_namespaces.png" alt="python_namespaces.png"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>All variable assignments (e.g. x = 5) in a function create or act on local variables:</p>
+<p><img src="attachment:python_increment_fct.png" alt="python_increment_fct.png"></p>
+<p>Indeed, using the builtin function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>, we see:</p>
 
 </div>
 </div>
@@ -12110,17 +12119,17 @@ after function call: 5
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_wrong_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside function - before assignment:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
-    <span class="c1"># during assignment, a new local variable &#39;a&#39; is created </span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside function - after assignment: &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:             &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;before calling function:            &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before assignment in increment:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after assignment in increment: &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
-<span class="n">add_wrong_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;after calling function:             &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>
+<span class="n">increment</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after calling increment:       &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12132,13 +12141,15 @@ after function call: 5
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>before calling function:             139873252358720 139873252358656
-inside function - before assignment: 139873252358720 139873252358656
-inside function - after assignment:  139873252358816 139873252358656
-after calling function:              139873252358720 139873252358656
+<pre>at initialization:              139943097608608
+before assignment in increment: 139943097608608
+after assignment in increment:  139943097608640
+after calling increment:        139943097608608
 </pre>
 </div>
 </div>
@@ -12146,50 +12157,31 @@ after calling function:              139873252358720 139873252358656
 </div>
 </div>
 
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>image</p>
-
-</div>
-</div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-warning">
-<font color=red>WARNING</font>: The execution of a function introduces a new symbol table used for the local variables of the function. 
-More precisely, <font color=red>all variable assignments (e.g. x = 5) in a function create or act on local variables ; whereas variable references (e.g. y = x + 5) first look in the local symbol table, then in the local symbol tables of enclosing functions, then in the global symbol table, and finally in the table of built-in names. Thus, global variables cannot be directly assigned a value within a function although they may be referenced</font>.</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Right way to do? Use the keyword <strong>return</strong> to return the modified value:</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">add_right_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step at initialization:          &quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">add_right_way</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">change_step</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;change the step&quot;&quot;&quot;</span>
+    <span class="n">step</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step inside change_step function:&quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;the sum of </span><span class="si">{}</span><span class="s2"> and </span><span class="si">{}</span><span class="s2"> is </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">res</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
+    
+<span class="n">change_step</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step after calling change_step:  &quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i:       &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">increment</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;i + step:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12201,10 +12193,17 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>the sum of 5 and 3 is 8
+<pre>step at initialization:           1
+step inside change_step function: 2
+step after calling change_step:   1 
+
+i:        0
+i + step: 1
 </pre>
 </div>
 </div>
@@ -12213,8 +12212,59 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font color=red>**WARNING**</font>:</p>
+<p>The execution of a function introduces a new symbol table used for the local variables of the function:</p>
+<ul>
+<li><font color=red>all variable assignments (e.g. x = 5) in a function create or act on local variables</font>,</li>
+<li><font color=red>variable references (e.g. y = x + 5) first look in the local symbol table, then in the global symbol table</font>.</li>
+</ul>
+<p><img src="attachment:python_increment_fct_2.png" alt="python_increment_fct_2.png"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
+
+<span class="n">i</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">increment</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12222,8 +12272,7 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12234,15 +12283,15 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">a_list</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">a_list</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Swap two elements of a list&quot;&quot;&quot;</span>
     <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">]</span>
-    
-<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
 
 <span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>
@@ -12257,7 +12306,9 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 2, 3, 4]
@@ -12270,8 +12321,7 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12279,9 +12329,62 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 <font color=blue>NOTE</font>: As long as you modify only an element (part) of a list, tuple, dict or composed object, it's OK.</div>
 </div>
 </div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>[image]</p>
+<p>Using function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:               &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">a_list</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Swap two elements of a list&quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before swapping elements in swap:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
+    <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after swapping elements in swap: &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
+
+<span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after call of swap function:     &quot;</span> <span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>at initialization:                139942860371720
+before swapping elements in swap: 139942860371720
+after swapping elements in swap:  139942860371720
+after call of swap function:      139942860371720
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12292,17 +12395,18 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># In the real world, you should use the method `extend` of list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+
+<span class="c1"># In the real world, you should use the method `extend` of list</span>
 <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Extend a list with another one&quot;&quot;&quot;</span>
     <span class="n">list_1</span> <span class="o">=</span> <span class="n">list_1</span> <span class="o">+</span> <span class="n">list_2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside function:    &quot;</span><span class="p">,</span> <span class="n">list_1</span><span class="p">)</span>
     
-<span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Extend list </span><span class="si">{}</span><span class="s2"> with list </span><span class="si">{}</span><span class="s2">:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">))</span>
 
 <span class="n">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">)</span>
@@ -12318,7 +12422,9 @@ More precisely, <font color=red>all variable assignments (e.g. x = 5) in a funct
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Extend list [0, 1, 2, 3, 4] with list [5, 6, 7]:
@@ -12332,35 +12438,35 @@ after function call: [0, 1, 2, 3, 4]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Using function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>, we see:</p>
+<p>[image]</p>
+<p>Using function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># In the real world, you should use the method `extend` of list</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;before calling function:          &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
+
+<span class="c1"># In the real world, you should use the method `extend` of list</span>
 <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Extend a list with another one&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside function - before assignment:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside extend - before assignment:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
     <span class="c1"># during assignment, a new local variable &#39;list_1&#39; is created</span>
     <span class="n">list_1</span> <span class="o">=</span> <span class="n">list_1</span> <span class="o">+</span> <span class="n">list_2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside function - after assignment: &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
-    
-<span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;before calling function:            &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside extend - after assignment: &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
 
 <span class="n">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;after calling function:             &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;after calling function:           &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12372,81 +12478,15 @@ after function call: [0, 1, 2, 3, 4]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>before calling function:             139873005854664 139873005851656
-inside function - before assignment: 139873005854664 139873005851656
-inside function - after assignment:  139873005994248 139873005851656
-after calling function:              139873005854664 139873005851656
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>image</p>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Global-variables">Global variables<a class="anchor-link" href="#Global-variables">&#182;</a></h3>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Let's define a variable before a function definition and try to modify it inside that function:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after initialization:&quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">play_with_global_vars</span><span class="p">():</span>
-    <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m dangerous&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside function:     &quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
-
-<span class="n">play_with_global_vars</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after function call: &quot;</span><span class="p">,</span> <span class="n">var</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>after initialization: I&#39;m a global variable
-inside function:      I&#39;m dangerous
-after function call:  I&#39;m a global variable
+<pre>before calling function:           139942859559560 139942962241096
+inside extend - before assignment: 139942859559560 139942962241096
+inside extend - after assignment:  139942859561288 139942962241096
+after calling function:            139942859559560 139942962241096
 </pre>
 </div>
 </div>
@@ -12455,190 +12495,7 @@ after function call:  I&#39;m a global variable
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Now, let's try to access global variable before to reassign it:</p>
-<div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span>
-
-<span class="k">def</span> <span class="nf">play_with_global_vars</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
-    <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m dangerous&quot;</span>
-
-<span class="n">play_with_global_vars</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span>
-
-<span class="k">def</span> <span class="nf">play_with_global_vars</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
-    <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m dangerous&quot;</span>
-
-<span class="n">play_with_global_vars</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">var</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">UnboundLocalError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-11-fc116ca52b31&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     var <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;I&#39;m dangerous&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>play_with_global_vars<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      8</span> print<span class="ansi-blue-fg">(</span>var<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">&lt;ipython-input-11-fc116ca52b31&gt;</span> in <span class="ansi-cyan-fg">play_with_global_vars</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> 
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">def</span> play_with_global_vars<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg">     </span>print<span class="ansi-blue-fg">(</span>var<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     var <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">&#34;I&#39;m dangerous&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> 
-
-<span class="ansi-red-fg">UnboundLocalError</span>: local variable &#39;var&#39; referenced before assignment</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-warning">
-<font color=red>WARNING</font>: <font color=red>A function can have access to variables defined outside BUT trying to assign them a new value create local variables</font>. This may lead to an unexpected behavior.</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>With more explanations:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;after initialization:               &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">play_with_global_vars</span><span class="p">():</span>
-    <span class="c1"># during assignment, a new local variable &#39;var&#39; is created</span>
-    <span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m dangerous&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside function - after assignment: &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;before calling function:            &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
-
-<span class="n">play_with_global_vars</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;after calling function:             &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">var</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>after initialization:                139873005702648
-before calling function:             139873005702648
-inside function - after assignment:  139873005326704
-after calling function:              139873005702648
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>image</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-info">
-<font color=blue>NOTE</font>: For complex types like list, tuple, dict or composed objects, it is possible to modify an element (part) of them.</div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a global variable&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="n">list_var2</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m another global variable&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">list_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_var2</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">play_with_global_vars</span><span class="p">():</span>
-    <span class="c1"># reassign the entire list --&gt; WRONG!</span>
-    <span class="n">list_var</span> <span class="o">=</span> <span class="s2">&quot;I&#39;m a local variable&quot;</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="c1"># reassign an element of the list --&gt; OK</span>
-    <span class="n">list_var2</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;new&quot;</span>
-    
-<span class="n">play_with_global_vars</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;========================================&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_var</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">list_var2</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12646,8 +12503,7 @@ after calling function:              139873005702648
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12658,7 +12514,7 @@ after calling function:              139873005702648
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_sequence</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -12686,7 +12542,9 @@ after calling function:              139873005702648
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -12699,8 +12557,7 @@ after calling function:              139873005702648
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12711,7 +12568,7 @@ after calling function:              139873005702648
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_sequence</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
@@ -12735,11 +12592,13 @@ after calling function:              139873005702648
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-14-5ab85da3ae92&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-29-5ab85da3ae92&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
 <span class="ansi-red-fg">    def get_sequence(start=0, end, step):</span>
                     ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> non-default argument follows default argument
@@ -12751,8 +12610,7 @@ after calling function:              139873005702648
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12763,7 +12621,7 @@ after calling function:              139873005702648
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wrong way</span>
@@ -12785,7 +12643,9 @@ after calling function:              139873005702648
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got [1]
@@ -12799,8 +12659,7 @@ Expected [3]. Got [1, 2, 3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12813,7 +12672,7 @@ This leads to an unexpected behavior when the default value is an object of comp
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Right way</span>
@@ -12837,7 +12696,9 @@ This leads to an unexpected behavior when the default value is an object of comp
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got [1]
@@ -12851,8 +12712,7 @@ Expected [3]. Got [3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12860,8 +12720,7 @@ Expected [3]. Got [3]
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12872,7 +12731,7 @@ Expected [3]. Got [3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_sequence</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -12897,7 +12756,9 @@ Expected [3]. Got [3]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 2, 4, 6, 8]
@@ -12909,8 +12770,7 @@ Expected [3]. Got [3]
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12921,7 +12781,7 @@ Expected [3]. Got [3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">get_sequence</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -12937,7 +12797,9 @@ Expected [3]. Got [3]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 2, 4, 6, 8]
@@ -12949,8 +12811,7 @@ Expected [3]. Got [3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12961,7 +12822,7 @@ Expected [3]. Got [3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">get_sequence</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>     <span class="c1"># 1 positional + 2 keyword args</span>
@@ -12977,7 +12838,9 @@ Expected [3]. Got [3]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[0, 2, 4, 6, 8]
@@ -12989,8 +12852,7 @@ Expected [3]. Got [3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13001,7 +12863,7 @@ Expected [3]. Got [3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_sequence</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>     <span class="c1"># 2 keyword + 1 positional args --&gt; WRONG!</span>
@@ -13017,11 +12879,13 @@ Expected [3]. Got [3]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-20-c79a3f2ddb6f&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-35-c79a3f2ddb6f&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
 <span class="ansi-red-fg">    get_sequence(step=2, end=10, 0)     # 2 keyword + 1 positional args --&gt; WRONG!</span>
                                 ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> positional argument follows keyword argument
@@ -13033,8 +12897,7 @@ Expected [3]. Got [3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13042,8 +12905,7 @@ Expected [3]. Got [3]
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13067,7 +12929,7 @@ Expected [3]. Got [3]
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">join_sequence</span><span class="p">(</span><span class="o">*</span><span class="n">sequences</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -13104,7 +12966,9 @@ Expected [3]. Got [3]
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>let&#39;s join [0, 2, 4, 6, 8], [10, 13, 16, 19] and [20, 21, 22, 23, 24]:
@@ -13120,8 +12984,7 @@ with reverse option:
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13129,8 +12992,7 @@ with reverse option:
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13148,7 +13010,7 @@ with reverse option:
 </div></div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">join_two_sequences</span><span class="p">(</span><span class="n">seq1</span><span class="p">,</span> <span class="n">seq2</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -13183,7 +13045,9 @@ with reverse option:
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>unpack list
@@ -13202,8 +13066,7 @@ join_sequence(*sequences, **reverse): [8, 6, 4, 2, 0]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
