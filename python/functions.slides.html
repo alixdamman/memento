@@ -11776,7 +11776,6 @@ ul.typeahead-list > li > a {
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
   font-size: 160%;
-  overflow-y: scroll;
 }
 .reveal pre {
   width: inherit;
@@ -11806,6 +11805,41 @@ ul.typeahead-list > li > a {
 }
 .reveal .progress {
   position: static;
+}
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #727272;
+}
+.reveal .controls .navigate-left.enabled:hover,
+.reveal .controls .navigate-left.enabled.enabled:hover {
+  border-right-color: #dfdfdf;
+}
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #727272;
+}
+.reveal .controls .navigate-right.enabled:hover,
+.reveal .controls .navigate-right.enabled.enabled:hover {
+  border-left-color: #dfdfdf;
+}
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #727272;
+}
+.reveal .controls .navigate-up.enabled:hover,
+.reveal .controls .navigate-up.enabled.enabled:hover {
+  border-bottom-color: #dfdfdf;
+}
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #727272;
+}
+.reveal .controls .navigate-down.enabled:hover,
+.reveal .controls .navigate-down.enabled.enabled:hover {
+  border-top-color: #dfdfdf;
+}
+.reveal .progress span {
+  background: #727272;
 }
 div.input_area {
   padding: 0.06em;
@@ -11839,6 +11873,19 @@ a.anchor-link {
 }
 .rendered_html p {
   text-align: inherit;
+}
+::-webkit-scrollbar
+{
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar *
+{
+  background:transparent;
+}
+::-webkit-scrollbar-thumb
+{
+  background: #727272 !important;
 }
 </style>
 
@@ -11890,7 +11937,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The keyword <strong>def</strong> introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters.</p>
+<p>The keyword <strong>def</strong> introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters:</p>
 
 </div>
 </div>
@@ -11936,7 +11983,7 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The keyword <strong>return</strong> is used to return a value</p>
+<p>The keyword <strong>return</strong> is used to return a value:</p>
 
 </div>
 </div>
@@ -11995,7 +12042,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note: this function already exists by default in Python</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note: this function already exists in Python</span>
 <span class="k">def</span> <span class="nf">divmod</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Return the quotient and the remainder of the division of two numbers&quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
@@ -12061,7 +12108,6 @@ a.anchor-link {
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:        &quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside increment function:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
 
@@ -12107,7 +12153,7 @@ after calling increment:   0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>All variable assignments (e.g. x = 5) in a function create or act on local variables:</p>
+<p><font color=red>**All variable assignments (e.g. x = 5) in a function create or act on local variables**</font></p>
 <p><img src="attachment:python_increment_fct.png" alt="python_increment_fct.png"></p>
 <p>Indeed, using the builtin function <a href="https://docs.python.org/3.5/library/functions.html#id">id</a>, we see:</p>
 
@@ -12123,8 +12169,8 @@ after calling increment:   0
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:             &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before assignment in increment:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="c1"># assignment creates a new local &#39;i&#39; variable</span>
     <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after assignment in increment: &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
@@ -12158,6 +12204,15 @@ after calling increment:        139943097608608
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><font color=red>**Access to variables first look in the local namespace (function), then in the global namespace (module)**</font>:</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -12168,12 +12223,12 @@ after calling increment:        139943097608608
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step at initialization:          &quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">change_step</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;change the step&quot;&quot;&quot;</span>
+    <span class="c1"># assignment creates a local &#39;step&#39; variable</span>
     <span class="n">step</span> <span class="o">=</span> <span class="n">value</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;step inside change_step function:&quot;</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
+    <span class="c1"># variables defined at module level are accessible in functions</span>
     <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
     
 <span class="n">change_step</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
@@ -12216,59 +12271,16 @@ i + step: 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><font color=red>**WARNING**</font>:</p>
-<p>The execution of a function introduces a new symbol table used for the local variables of the function:</p>
-<ul>
-<li><font color=red>all variable assignments (e.g. x = 5) in a function create or act on local variables</font>,</li>
-<li><font color=red>variable references (e.g. y = x + 5) first look in the local symbol table, then in the global symbol table</font>.</li>
-</ul>
 <p><img src="attachment:python_increment_fct_2.png" alt="python_increment_fct_2.png"></p>
 
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">step</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Increment the value of i&quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="n">step</span>
-
-<span class="n">i</span><span class="p">,</span> <span class="n">step</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span>
-<span class="n">i</span> <span class="o">=</span> <span class="n">increment</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Sequence-types-(-list,-tuple,-set,-dict,-...)-+-composed-objects">Sequence types ( list, tuple, set, dict, ...) + composed objects<a class="anchor-link" href="#Sequence-types-(-list,-tuple,-set,-dict,-...)-+-composed-objects">&#182;</a></h3>
+<h3 id="Sequence-types-(-list,-tuple,-set,-dict,-...)-+-other-composed-objects">Sequence types ( list, tuple, set, dict, ...) + other composed objects<a class="anchor-link" href="#Sequence-types-(-list,-tuple,-set,-dict,-...)-+-other-composed-objects">&#182;</a></h3>
 </div>
 </div>
 </div><div class="fragment">
@@ -12291,6 +12303,7 @@ i + step: 1
 
 <span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">a_list</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Swap two elements of a list&quot;&quot;&quot;</span>
+    <span class="c1"># Working on elements of the list doesn&#39;t create a local variable</span>
     <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">]</span>
 
 <span class="n">swap</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">my_list</span><span class="p">)</span>
@@ -12325,11 +12338,11 @@ i + step: 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-info">
-<font color=blue>NOTE</font>: As long as you modify only an element (part) of a list, tuple, dict or composed object, it's OK.</div>
+<p><font color=red>**Assignments of elements of a list, dict, ... variable (e.g. x[1:4] = [4, 5, 6]) does not create a new local variable**</font></p>
+
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12342,14 +12355,13 @@ i + step: 1
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;at initialization:               &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">my_list</span><span class="p">))</span>
 
 <span class="k">def</span> <span class="nf">swap</span><span class="p">(</span><span class="n">pos1</span><span class="p">,</span> <span class="n">pos2</span><span class="p">,</span> <span class="n">a_list</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Swap two elements of a list&quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;before swapping elements in swap:&quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
     <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos1</span><span class="p">],</span> <span class="n">a_list</span><span class="p">[</span><span class="n">pos2</span><span class="p">]</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;after swapping elements in swap: &quot;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">a_list</span><span class="p">))</span>
@@ -12372,10 +12384,10 @@ i + step: 1
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>at initialization:                139942860371720
-before swapping elements in swap: 139942860371720
-after swapping elements in swap:  139942860371720
-after call of swap function:      139942860371720
+<pre>at initialization:                140616228189448
+before swapping elements in swap: 140616228189448
+after swapping elements in swap:  140616228189448
+after call of swap function:      140616228189448
 </pre>
 </div>
 </div>
@@ -12383,27 +12395,27 @@ after call of swap function:      139942860371720
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>If you try to reassign it completely, you'll get in trouble</p>
+<p>If you try to reassign the whole list, dict or composed object, you'll get in trouble:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">list_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
 <span class="n">list_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
 
-<span class="c1"># In the real world, you should use the method `extend` of list</span>
+<span class="c1"># Note: In the real world, you should use the method `extend` of list</span>
 <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extend a list with another one&quot;&quot;&quot;</span>
+    <span class="c1"># the whole list &#39;list_1&#39; is reassigned --&gt; a local &#39;list_1&#39; variable is created</span>
     <span class="n">list_1</span> <span class="o">=</span> <span class="n">list_1</span> <span class="o">+</span> <span class="n">list_2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;inside function:    &quot;</span><span class="p">,</span> <span class="n">list_1</span><span class="p">)</span>
     
@@ -12459,9 +12471,8 @@ after function call: [0, 1, 2, 3, 4]
 
 <span class="c1"># In the real world, you should use the method `extend` of list</span>
 <span class="k">def</span> <span class="nf">extend</span><span class="p">(</span><span class="n">list_1</span><span class="p">,</span> <span class="n">list_2</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Extend a list with another one&quot;&quot;&quot;</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside extend - before assignment:&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
-    <span class="c1"># during assignment, a new local variable &#39;list_1&#39; is created</span>
+    <span class="c1"># the whole list &#39;list_1&#39; is reassigned --&gt; a local &#39;list_1&#39; variable is created</span>
     <span class="n">list_1</span> <span class="o">=</span> <span class="n">list_1</span> <span class="o">+</span> <span class="n">list_2</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;inside extend - after assignment: &#39;</span><span class="p">,</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_1</span><span class="p">),</span> <span class="nb">id</span><span class="p">(</span><span class="n">list_2</span><span class="p">))</span>
 
@@ -12499,6 +12510,28 @@ after calling function:            139942859559560 139942962241096
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="What-to-remember?">What to remember?<a class="anchor-link" href="#What-to-remember?">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><font color=red>**Access to variables first look in the local namespace (function), then in the global namespace (module)**</font></li>
+<li><font color=red>**Variable assignments (e.g. x = 5) in a function create or act on local variables**</font></li>
+<li><font color=red>**Assignments of elements of a list, dict, ... variable (e.g. x[1:4] = [4, 5, 6]) does not create a new local variable**</font></li>
+</ul>
+<p><font color=red>**TIPS: [Global variables are dangerous](http://wiki.c2.com/?GlobalVariablesAreBad). Use them as read-only variables in functions or, if you need to modify them, pass them as arguments and return them at the end of functions**</font></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Default-Argument-Values">Default Argument Values<a class="anchor-link" href="#Default-Argument-Values">&#182;</a></h2>
 </div>
 </div>
@@ -12514,7 +12547,7 @@ after calling function:            139942859559560 139942962241096
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_sequence</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
@@ -12528,7 +12561,7 @@ after calling function:            139942859559560 139942962241096
 <span class="c1"># if no value provided for step, it will be 1 by default</span>
 <span class="n">seq</span> <span class="o">=</span> <span class="n">get_sequence</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
-<span class="c1"># passing a value different from 1 for step argument</span>
+<span class="c1"># passing a value different from 1 for argument step </span>
 <span class="n">seq</span> <span class="o">=</span> <span class="n">get_sequence</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">seq</span><span class="p">)</span>
 </pre></div>
@@ -12561,8 +12594,8 @@ after calling function:            139942859559560 139942962241096
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-warning">
-<font color=red>WARNING</font>: <font color=red>arguments with default values come always after all the others.</font></div>
+<p><font color=red>**WARNING**: arguments with default values come always after all the others.</font>&lt;/div&gt;</p>
+
 </div>
 </div>
 </div>
@@ -12663,10 +12696,10 @@ Expected [3]. Got [1, 2, 3]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-warning">
-<font color=red>WARNING</font>: <font color=red>The default value is evaluated only once</font>. 
+<p><font color=red>**WARNING**: The default value is evaluated only once</font>. 
 This leads to an unexpected behavior when the default value is an object of composed type such as a list or dictionary. 
-<font color=red>For arguments expecting list or dictionary or object of composed type as default value, use None instead and set default value inside the function</font>.</div>
+<font color=red>For arguments expecting a list or dict or composed object as default value, use None instead and set the default value at the beginning of the function</font>.</p>
+
 </div>
 </div>
 </div>
@@ -12724,7 +12757,7 @@ Expected [3]. Got [3]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When a function is called, values must be passed in the order of arguments as in the function definition</p>
+<p>When a function is called, values must be passed in the order of arguments as in the function definition:</p>
 
 </div>
 </div>
@@ -12774,7 +12807,7 @@ Expected [3]. Got [3]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>But functions can also be called using keyword arguments of the form kwarg=value. It is then possible to pass argument in any order.</p>
+<p>But functions can also be called using keyword arguments of the form <strong>kwarg=value</strong>. It is then possible to pass argument in any order:</p>
 
 </div>
 </div>
@@ -12815,7 +12848,7 @@ Expected [3]. Got [3]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>It is even possible to mix positional and keyword arguments</p>
+<p>It is even possible to mix positional and keyword arguments:</p>
 
 </div>
 </div>
@@ -12856,8 +12889,8 @@ Expected [3]. Got [3]
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div class="alert alert-block alert-warning">
-<font color=red>WARNING</font>: <font color=red>positional argument must always be passed first</font>.</div>
+<p><font color=red>**WARNING**: positional arguments must always be passed first</font>:</p>
+
 </div>
 </div>
 </div>
@@ -13099,8 +13132,7 @@ require(
             progress: true,
             history: true,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+            transition: "slide",
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
@@ -13120,13 +13152,25 @@ require(
 
         Reveal.addEventListener('slidechanged', update);
 
-        var update_scroll = function(event){
-          $(".reveal").scrollTop(0);
-        };
+        function setScrollingSlide() {
+            var scroll = false
+            if (scroll === true) {
+              var h = $('.reveal').height() * 0.95;
+              $('section.present').find('section')
+                .filter(function() {
+                  return $(this).height() > h;
+                })
+                .css('height', 'calc(95vh)')
+                .css('overflow-y', 'scroll')
+                .css('margin-top', '20px');
+            }
+        }
 
-        Reveal.addEventListener('slidechanged', update_scroll);
+        // check and set the scrolling slide every time the slide change
+        Reveal.addEventListener('slidechanged', setScrollingSlide);
 
     }
+
 );
 </script>
 
