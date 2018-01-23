@@ -1,0 +1,58 @@
+Exercise 0: create an new empty project
+
+* create an empty project called “python_workshop” (in c:\usr\)
+* copy all files & directories from <desktop>/python_workshop/ to c:\usr\python_workshop
+
+====== How to define and call functions ======
+
+Exercise 1: create and call a function "hello" with no argument
+
+* create a new python module "hello.py" (module = file with extension .py)
+* define a function "hello" with no arguments and make it display "Hello World !" using the print() built-in function
+* call the function
+Note: functions must be defined before to be called
+
+Exercise 2: add arguments to the function "hello"
+
+* add the arguments 'firstname' and 'name' to the "hello" function
+* modify the function so as it displays "Hello <firstname> <name>!"
+* call the function by passing your firstname and name as strings
+* store your firstname and name in two variables and call the function by passing the two variables
+
+Exercise 3: make function "hello" return a string
+
+* use the return statement in the "hello" function to return the string "Hello <firstname> <name>!"
+  (instead of printing it)
+* call the function and store the returned string in a new variable
+* print the result
+
+Exercice 4: in module "model_to_function.py", create a function "projection"
+
+* move all code lines between comment "# start model" and "# end model" in a function named "projection"
+ (Note: you need to add arguments and to use the return statement)
+* call the function "projection" and the store the result in a new variable
+
+====== Keyword arguments ======
+
+Exercise 5: call function "projection" using keyword arguments
+
+* call "projection" using positional arguments
+* call "projection" using one positional argument and one keyword argument
+* call "projection" by inverting order of arguments
+
+====== Default argument values ======
+
+Exercise 6: add an argument with a default value to the function "projection"
+
+* add a boolean argument "display" with default value set to "False"
+* before to return the result in function "projection", start the viewer if "display" is "True"
+* call the function "projection" without passing a value for argument "display"
+* call the function "projection" with "display=True"
+
+====== Arbitrary argument lists ======
+
+Exercise 7: use a session to save output
+
+* create a session "output" containing the axes "proj_pop.age", "proj_pop.gender" and "proj_pop.year"
+  and the arrays "proj_pop" and "proj_pop_gy"
+* use the method "save" of "Session" objects to save it in a HDF5 file named "projection.h5"
