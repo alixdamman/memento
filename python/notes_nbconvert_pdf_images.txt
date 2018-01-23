@@ -1,0 +1,9 @@
+for notebook containing images, do not try 
+$jupyter nbconvert (...).ipynb --to pdf
+directly. It doesn't work.
+
+Instead: 
+1) run '$ jupyter nbconvert (...).ipynb --to latex'
+2) open the .tex file and remove 'attachment:' in each \includegraphics command
+3) run '$ xelatex (...).tex' 
+
