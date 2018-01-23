@@ -74,12 +74,9 @@ Function with an input argument:
 .. code:: ipython3
 
     def it_helpdesk(problem):
-        """Print universal IT helpdesk answer"""
-        print("Hello,")
         print("Thank you for your request for support concerning:")
         print(problem)
-        print("We will process it as soon as an operator is available.")
-        print("In the mean time, have you tried to turn it off and on again?")
+        print("Before we do anything, have you tried to turn it off and on again?")
 
 Function returning something:
 
@@ -87,12 +84,10 @@ Function returning something:
 
     # (case 1) function returning an expression
     def it_helpdesk():
-        """Return universal solution to any computer problem"""
         return "Have you tried to turn it off and on again?"
     
     # (case 2) function returning a variable
     def it_helpdesk():
-        """Return universal solution to any computer problem"""
         answer = "Have you tried to turn it off and on again?"
         return answer
 
@@ -101,12 +96,9 @@ Function with an input argument and returning something:
 .. code:: ipython3
 
     def it_helpdesk(problem):
-        """Return universal IT helpdesk answer"""
-        answer = "Hello,\n"
-        answer = answer + "Thank you for your request for support concerning:\n"
+        answer = "Thank you for your request for support concerning:\n"
         answer = answer + problem + "\n"
-        answer = answer + "We will process it as soon as an operator is available.\n"
-        answer = answer + "In the mean time, have you tried to turn it off and on again?"
+        answer = answer + "Before we do anything, have you tried to turn it off and on again?"
         return answer
 
 How to call functions?
@@ -135,7 +127,6 @@ Function with no input arguments:
 .. code:: ipython3
 
     def it_helpdesk():
-        """Print universal solution to any computer problem"""
         print("Have you tried to turn it off and on again?")
     
     # call and execute function "it_helpdesk()"
@@ -152,12 +143,9 @@ Function with an input argument:
 .. code:: ipython3
 
     def it_helpdesk(problem):
-        """Print universal IT helpdesk answer"""
-        print("Hello,")
         print("Thank you for your request for support concerning:")
         print(problem)
-        print("We will process it as soon as an operator is available.")
-        print("In the mean time, have you tried to turn it off and on again?")
+        print("Before we do anything, have you tried to turn it off and on again?")
         
     # call function "it_helpdesk" and pass a string as input argument
     it_helpdesk("My computer smells weird and is very hot")
@@ -172,19 +160,15 @@ Function with an input argument:
 
 .. parsed-literal::
 
-    Hello,
     Thank you for your request for support concerning:
     My computer smells weird and is very hot
-    We will process it as soon as an operator is available.
-    In the mean time, have you tried to turn it off and on again?
+    Before we do anything, have you tried to turn it off and on again?
     
     10 minutes later...
     
-    Hello,
     Thank you for your request for support concerning:
     My computer is on fire!
-    We will process it as soon as an operator is available.
-    In the mean time, have you tried to turn it off and on again?
+    Before we do anything, have you tried to turn it off and on again?
 
 
 Function returning something:
@@ -192,7 +176,6 @@ Function returning something:
 .. code:: ipython3
 
     def it_helpdesk():
-        """Return universal solution to any computer problem"""
         return "Have you tried to turn it off and on again?"
     
     # call function "it_helpdesk"
@@ -210,12 +193,9 @@ Function with an input argument and returning something:
 .. code:: ipython3
 
     def it_helpdesk(problem):
-        """Return universal IT helpdesk answer"""
-        answer = "Hello,\n"
-        answer = answer + "Thank you for your request for support concerning:\n"
+        answer =  "Thank you for your request for support concerning:\n"
         answer = answer + problem + "\n"
-        answer = answer + "We will process it as soon as an operator is available.\n"
-        answer = answer + "In the mean time, have you tried to turn it off and on again?"
+        answer = answer + "Before we do anything, have you tried to turn it off and on again?"
         return answer
     
     # call function "it_helpdesk" and pass a string as input argument
@@ -233,19 +213,15 @@ Function with an input argument and returning something:
 
 .. parsed-literal::
 
-    Hello,
     Thank you for your request for support concerning:
     My computer smells weird and is very hot
-    We will process it as soon as an operator is available.
-    In the mean time, have you tried to turn it off and on again?
+    Before we do anything, have you tried to turn it off and on again?
     
     10 minutes later...
     
-    Hello,
     Thank you for your request for support concerning:
     My computer is on fire!
-    We will process it as soon as an operator is available.
-    In the mean time, have you tried to turn it off and on again?
+    Before we do anything, have you tried to turn it off and on again?
 
 
 **Note**: a function can return several values:
@@ -254,7 +230,6 @@ Function with an input argument and returning something:
 
     # Note: this function already exists in Python
     def divmod(a, b):
-        """Return the quotient and the remainder of the division of two numbers"""
         return a // b, a % b
     
     quotient, remainder = divmod(5, 2)
@@ -275,11 +250,10 @@ It is possible to pass input arguments to a function using the syntax
 .. code:: ipython3
 
     def can_i_trust_this_website(website, country):
-        """Return if a website can be trusted"""
         if country == 'US' and 'foxnews' in website:
             print("Yes")
         else:
-            print("Fake news")
+            print("No! It's all fake news!")
     
     # call function can_i_trust_this_website using "keywords arguments"
     can_i_trust_this_website(website="http://www.plan.be", country="Belgium")
@@ -287,7 +261,7 @@ It is possible to pass input arguments to a function using the syntax
 
 .. parsed-literal::
 
-    Fake news
+    No! It's all fake news!
 
 
 In that case, arguments can be passed in any order:
@@ -300,7 +274,7 @@ In that case, arguments can be passed in any order:
 
 .. parsed-literal::
 
-    Fake news
+    No! It's all fake news!
 
 
 It is even possible to mix positional and keyword arguments:
@@ -312,7 +286,7 @@ It is even possible to mix positional and keyword arguments:
 
 .. parsed-literal::
 
-    Fake news
+    No! It's all fake news!
 
 
 **WARNING**: positional arguments must always be passed first
@@ -325,7 +299,7 @@ It is even possible to mix positional and keyword arguments:
 ::
 
 
-      File "<ipython-input-35-9e159a4e5cf9>", line 1
+      File "<ipython-input-13-ea4a27a80b58>", line 1
         can_i_trust_this_website(website="http://www.plan.be", "Belgium")
                                                               ^
     SyntaxError: positional argument follows keyword argument
@@ -335,39 +309,36 @@ It is even possible to mix positional and keyword arguments:
 Default Argument Values
 -----------------------
 
-It is possible to set a value by default to some arguments of a
-function:
+It is possible to set a default value to some arguments of a function:
 
 .. code:: ipython3
 
     def can_i_trust_this_website(website, country='Belgium'):
-        """Return if a website can be trusted"""
         if country == 'US' and 'foxnews' in website:
             print("Yes")
         else:
-            print("Fake news")
+            print("No! It's all fake news!")
     
-    # if no value is passed for the input argument "country", it will be set to "Belgium" by default 
+    # if no value is passed for the "country" argument, it will be set to "Belgium" by default 
     can_i_trust_this_website("http://www.plan.be")
 
 
 .. parsed-literal::
 
-    Fake news
+    No! It's all fake news!
 
 
-**WARNING**: arguments with default values come always after all the
-others:
+**WARNING**: arguments with default values must always be declared after
+all the others:
 
 .. code:: ipython3
 
     # Wrong function definition --> arguments with default values must always be placed at the end of the arguments list
     def can_i_trust_this_website(website="http://www.foxnews.com", country):
-        """Return if a website can be trusted"""
         if country == 'US' and 'foxnews' in website:
             print("Yes")
         else:
-            print("Fake news")
+            print("No! It's all fake news!")
     
     can_i_trust_this_website("Belgium")
 
@@ -375,7 +346,7 @@ others:
 ::
 
 
-      File "<ipython-input-37-a1110f8ee8f2>", line 2
+      File "<ipython-input-15-85bf7bff3567>", line 2
         def can_i_trust_this_website(website="http://www.foxnews.com", country):
                                     ^
     SyntaxError: non-default argument follows default argument
@@ -393,25 +364,31 @@ or array?
         new_list.append(value)
         return new_list
     
-    print('Expected [1]. Got {}'.format(new_list_wrong_way(1)))
-    print('Expected [2]. Got {}'.format(new_list_wrong_way(2)))
-    print('Expected [3]. Got {}'.format(new_list_wrong_way(3)))
+    result_1 = new_list_wrong_way(1)
+    print('Expected [1]. Got:', result_1)
+    
+    result_2 = new_list_wrong_way(2)
+    print('Expected [1]. Got:', result_2)
+    
+    result_3 = new_list_wrong_way(3)
+    print('Expected [1]. Got:', result_3)
 
 
 .. parsed-literal::
 
-    Expected [1]. Got [1]
-    Expected [2]. Got [1, 2]
-    Expected [3]. Got [1, 2, 3]
+    Expected [1]. Got: [1]
+    Expected [1]. Got: [1, 2]
+    Expected [1]. Got: [1, 2, 3]
 
 
 The default value is evaluated only once. This leads to an unexpected
 behavior when the default value is an object of composed type such as a
 list or dictionary.
 
-**WARNING**: For arguments expecting a list or a dictionary or an array
-as default value, use **None** instead and **set the default value at
-the beginning of the function**:
+**WARNING**: To define a function with arguments having a list, a
+dictionary or an array as default value, use **None** as the default
+value in the function definition and and **set the default value at the
+beginning of the function**:
 
 .. code:: ipython3
 
@@ -422,16 +399,54 @@ the beginning of the function**:
         new_list.append(a)
         return new_list
     
-    print('Expected [1]. Got {}'.format(new_list_right_way(1)))
-    print('Expected [2]. Got {}'.format(new_list_right_way(2)))
-    print('Expected [3]. Got {}'.format(new_list_right_way(3)))
+    result_1 = new_list_right_way(1)
+    print('Expected [1]. Got:', result_1)
+    
+    result_2 = new_list_right_way(2)
+    print('Expected [1]. Got:', result_2)
+    
+    result_3 = new_list_right_way(3)
+    print('Expected [1]. Got:', result_3)
 
 
 .. parsed-literal::
 
-    Expected [1]. Got [1]
-    Expected [2]. Got [2]
-    Expected [3]. Got [3]
+    Expected [1]. Got: [1]
+    Expected [1]. Got: [2]
+    Expected [1]. Got: [3]
+
+
+**Note**: Keywords arguments and default argument values are two
+different things: - **Keywords arguments**: "name=value" in **function
+call** - **Default argument values**: "name=value" in **function
+definition**
+
+An argument without a default value can be passed as keyword argument
+and an argument with default value can be used like any positional
+argument:
+
+.. code:: ipython3
+
+    def function_with_default_argument_value(positional_arg, arg_with_default_value="argument with a default value"):
+        print(positional_arg)
+        print(arg_with_default_value)
+        print()
+    
+    # An argument without a default value can be passed as keyword argument 
+    function_with_default_argument_value(positional_arg="positional arg passed as keyword argument")
+    
+    # An argument with default value can be used like any positional argument
+    function_with_default_argument_value("positional arg", "override default value")
+
+
+.. parsed-literal::
+
+    positional arg passed as keyword argument
+    argument with a default value
+    
+    positional arg
+    override default value
+    
 
 
 Functions vs Methods
@@ -449,6 +464,7 @@ A method is a function called on a object using the syntax
     
     # call method 'sum' on object 'pop'
     total_pop = pop.sum('age')
+    print()
     print("total population:", total_pop)
 
 
@@ -456,6 +472,7 @@ A method is a function called on a object using the syntax
 
     age    0    1    2    3    4    5
          1.0  1.0  1.0  1.0  1.0  1.0
+    
     total population: 6.0
 
 
@@ -465,15 +482,17 @@ Arbitrary Argument Lists
 Some functions or methods have special input arguments ``*args`` and
 ``**kwargs``.
 
-The former represents an arbitrary number of input arguments:
+A function which has such arguments can have an arbitrary number of
+arguments: - ``*args`` for positional arguments (arguments passed
+without keyword)
 
 .. code:: ipython3
 
-    def function_with_arbitrary_nb_arguments(*args):
+    def function_with_arbitrary_positional_arguments(*args):
         # passed arguments are converted to a tuple
         print(args)
         
-    function_with_arbitrary_nb_arguments(0, 1, 2, 3, 4)
+    function_with_arbitrary_positional_arguments(0, 1, 2, 3, 4)
 
 
 .. parsed-literal::
@@ -481,20 +500,20 @@ The former represents an arbitrary number of input arguments:
     (0, 1, 2, 3, 4)
 
 
-The later represents a arbitrary number of keyword input arguments:
+-  ``**kwargs`` for keyword arguments
 
 .. code:: ipython3
 
-    def function_with_arbitrary_nb_arguments(**kwargs):
+    def function_with_arbitrary_keyword_arguments(**kwargs):
         # passed arguments are converted to a dictionary
         print(kwargs)
         
-    function_with_arbitrary_nb_arguments(firstname='Sarah', name='Connor', country='US')
+    function_with_arbitrary_keyword_arguments(firstname='Sarah', name='Connor', country='US')
 
 
 .. parsed-literal::
 
-    {'name': 'Connor', 'country': 'US', 'firstname': 'Sarah'}
+    {'firstname': 'Sarah', 'name': 'Connor', 'country': 'US'}
 
 
 The `builder method for
@@ -525,7 +544,7 @@ is a good example:
 
 .. parsed-literal::
 
-    Session(age, gender, country, pop_by_age, pop_be, pop_all)
+    Session(age, gender, country, pop_be, pop_by_age, pop_all)
 
 
 Local vs global variables
@@ -594,7 +613,7 @@ the name will access the **local** variable (*variable shadowing*).
     I'm a global variable
 
 
-Don't want to lose your modifications? Use **return** statement:
+Don't want to lose your modifications? Use the **return** statement:
 
 .. code:: ipython3
 
@@ -603,7 +622,7 @@ Don't want to lose your modifications? Use **return** statement:
     def my_function():
         # variable assignments (i.e. using operator =) in a function create or act on local variables
         var = "I'm a global variable and I have been modified"
-        # Don't want to lose your modifications? Use return statement
+        # Don't want to lose your modifications? Use the return statement
         return var
     
     # set new content to the variable 'var'
@@ -617,13 +636,13 @@ Don't want to lose your modifications? Use **return** statement:
     I'm a global variable and I have been modified
 
 
-**Rule 4**: Input arguments are local variables. Use **return**
+**Rule 4**: Input arguments are local variables. Use the **return**
 statement If you want to keep back your modifications after the call to
 the function:
 
 .. code:: ipython3
 
-    var = "I'm a global variable"
+    var = "I'm a variable called 'var'"
     
     def my_function(var):
         # input arguments are local
@@ -639,9 +658,9 @@ the function:
 
 .. parsed-literal::
 
-    local variables: {'var': "I'm a global variable"}
+    local variables: {'var': "I'm a variable called 'var'"}
     I'm an input argument and I'm local to the function
-    I'm a global variable
+    I'm a variable called 'var'
 
 
 .. code:: ipython3
@@ -732,10 +751,10 @@ dictionary, array, session, ...) does not create a new local variable:
 
 Why?
 
-Assigning a new value to an object (x = 5, l = [0, 1, 2, 3]) creates a
+Assigning a new value to an object (x = 5, y = [0, 1, 2, 3]) creates a
 new object.
 
-Instead, modifying elements of a mutable object (l[1:3] = [0, 0]) does
+Instead, modifying elements of a mutable object (y[1:3] = [0, 0]) does
 not create a new object but modifies the existing object.
 
 What if want to modify the whole content of an array?
@@ -821,12 +840,6 @@ associated variable passed to the function:
     
     let's call 'my_function' and try to modify array_1 and array_2
     
-    locals: {'arr_1': sex    F    M
-         0.0  0.0, 'arr_2': country   be   fr   de
-             1.0  1.0  1.0}
-    locals: {'arr_1': sex    F    M
-         1.0  1.0, 'arr_2': country   be   fr   de
-             1.0  0.0  0.0}
     array_1 has not been modified:
     sex    F    M
          0.0  0.0
@@ -839,21 +852,26 @@ associated variable passed to the function:
 What to remember?
 ~~~~~~~~~~~~~~~~~
 
-**For all objects**: 1. Functions have access to global variables. 2.
-Variable assignments (i.e. using operator =) in a function create or act
-on local variables. 3. if a local variable has the same name as a global
-one, using the name will access the **local** variable (*variable
-shadowing*). 4. Input arguments are local variables. Use **return**
-statement If you want to keep back your modifications after the call to
-the function.
+**For all objects**:
 
-**For mutable objects (list, dict, Axes, LArray, Session, ...)**: 5.
-Modifying **elements** of a **mutable** variable does not create a new
-local variable (e.g. pop[10:99] = 0). 6. To change the whole content of
-an array without creating a new local one, add **[:]** next to the array
-(e.g. pop[:] = 0). 7. Modifying **elements** of a **mutable** input
-argument modify also the content of the variable passed to the function
-(e.g. pop[10:99] = 0).
+1. Functions have access to global variables.
+2. Variable assignments (i.e. using operator =) in a function create or
+   act on local variables.
+3. if a local variable has the same name as a global one, using the name
+   will access the **local** variable (*variable shadowing*).
+4. Input arguments are local variables. Use the **return** statement If
+   you want to keep back your modifications after the call to the
+   function.
+
+**For mutable objects (list, dict, Axes, LArray, Session, ...)**:
+
+5. Modifying **elements** of a **mutable** variable does not create a
+   new local variable (e.g. pop[10:99] = 0).
+6. To change the whole content of an array without creating a new local
+   one, add **[:]** next to the array (e.g. pop[:] = 0).
+7. Modifying **elements** of a **mutable** input argument modify also
+   the content of the variable passed to the function (e.g. pop[10:99] =
+   0).
 
 **TIPS**:
 
