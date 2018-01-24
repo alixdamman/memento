@@ -26,7 +26,6 @@ Exercise 2: add arguments to the function "hello"
 * call the function by passing your firstname and surname as strings
 * store your firstname and surname in variable 'fname' and 'sname' respectively
 * call the function by passing the variables 'fname' and 'sname'
-Note: when passing variables to a function, the names of variables and arguments can be different
 
 
 Exercise 3: make function "hello" return a string
@@ -40,10 +39,10 @@ Exercise 3: make function "hello" return a string
 Exercice 4: create a function in a model script
 
 * open the module "model_to_function.py"
-* move the code block below the first comment starting with "# start projection (...)" to a function called 'projection'
+* create a function called 'projection' that reproduces the calculation done below comments "# start projection ..."
   The function has two arguments called 'initial_pop' and 'coef' and returns a new array containing the projected
   population.
-* remove the code blocks below the other comments starting with "# start projection (...)"
+* replace the three code blocks by calls to the 'projection' function
 * call the function "projection" three times with different values for the argument 'coef' and store the results in
   arrays 'proj_pop1', 'proj_pop2' and 'proj_pop3'
 
@@ -62,5 +61,5 @@ Exercise 5: call function "projection" using keyword arguments
 Exercise 6: add an argument with a default value to the function "projection"
 
 * add a boolean argument "display" with default value set to "False"
-* before to return the result in function "projection", start the viewer if "display" is "True"
-* change calls to function "projection" so as to display result before it returns the result of projection
+* before returning the result in function "projection", start the viewer if "display" is "True"
+* change calls to function "projection" so that it displays the result before it returns the result of projection
