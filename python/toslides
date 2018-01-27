@@ -1,2 +1,2 @@
 
-jupyter nbconvert $1 --to slides
+jupyter nbconvert $1 --to slides --template slides_reveal.tpl --post serve
