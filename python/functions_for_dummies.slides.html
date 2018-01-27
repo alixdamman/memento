@@ -36,7 +36,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
 
 <!-- Loading the mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -58,7 +58,7 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <!-- Get Font-awesome from cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
 
 <style type="text/css">
     /*!
@@ -11775,7 +11775,7 @@ ul.typeahead-list > li > a {
 <style type="text/css">
 /* Overrides of notebook CSS for static HTML export */
 .reveal {
-  font-size: 160%;
+  font-size: 300%;
   overflow-y: scroll;
 }
 .reveal pre {
@@ -11854,7 +11854,8 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11871,7 +11872,8 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11880,36 +11882,60 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Why-use-functions?">Why use functions?<a class="anchor-link" href="#Why-use-functions?">&#182;</a></h2><ul>
-<li><strong>Reusability</strong>: functions are reusable blocks of code and allow to avoid copy/paste which is a dangerous practice and pollutes the code.</li>
+<li><strong>Reusability</strong>: functions are reusable blocks of code and allow to avoid copy/paste which is a dangerous practice and pollutes the code. </li>
 </ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><strong>Organization</strong>: functions help to organize your model. As a model grows in complexity, having all the code live inside a "main" script becomes increasingly complicated. Using functions allows to divide complicated tasks into smaller, simpler ones, and reduce the overall complexity of your model.</li>
 </ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><strong>Abstraction</strong>: Functions can be used as "black boxes", you don't need to know what is inside to use them. To use a function, you just need to know its name (= what it is supposed to do), the input arguments and the optional output. </li>
 </ul>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-define-and-call-functions?">How to define and call functions?<a class="anchor-link" href="#How-to-define-and-call-functions?">&#182;</a></h2><h3 id="How-to-define-functions?">How to define functions?<a class="anchor-link" href="#How-to-define-functions?">&#182;</a></h3><ul>
-<li>Function blocks begin with the keyword <strong>def</strong> followed by the <strong>function name</strong>, parentheses <strong>( )</strong> and a colon <strong>:</strong></li>
-<li>Input <strong>arguments</strong>, if any, are placed within these parentheses.</li>
-<li>The code block within every function is indented.</li>
-<li>A function can optionally start by its <strong>documentation</strong>: a string written between triple quotes """ (multiple lines documentation is allowed).</li>
-<li>The optional statement <strong>return [variable(s) or expression]</strong> exits a function and returns output result(s).</li>
+<ul>
+<li><strong>IDE-Tools</strong>: take advantage of tools provided by most IDE software.</li>
 </ul>
-<p>Syntax:</p>
-<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="How-to-define-and-call-functions?">How to define and call functions?<a class="anchor-link" href="#How-to-define-and-call-functions?">&#182;</a></h2><h3 id="How-to-define-functions?">How to define functions?<a class="anchor-link" href="#How-to-define-functions?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">arguments</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;function documentation = docstring (optional)&quot;&quot;&quot;</span>
     <span class="o">&lt;</span><span class="n">function</span> <span class="n">code</span><span class="o">&gt;</span>
     <span class="c1"># optional</span>
@@ -11918,8 +11944,25 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Function blocks begin with the keyword <strong>def</strong> followed by the <strong>function name</strong>, parentheses <strong>( )</strong> and a colon <strong>:</strong></li>
+<li>Input <strong>arguments</strong>, if any, are placed within these parentheses.</li>
+<li>The code block within every function is indented.</li>
+<li>A function can optionally start by its <strong>documentation</strong>: a string written between triple quotes """ (multiple lines documentation is allowed).</li>
+<li>The optional statement <strong>return [variable(s) or expression]</strong> exits a function and returns output result(s).</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11943,7 +11986,8 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11968,7 +12012,8 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11997,7 +12042,8 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12023,18 +12069,15 @@ a.anchor-link {
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="How-to-call-functions?">How to call functions?<a class="anchor-link" href="#How-to-call-functions?">&#182;</a></h3><ul>
-<li>To call a function, simply type its name followed by parentheses ().</li>
-<li>If the function requires input arguments, you need to provide values for them inside the parentheses. 
-Theses values can be constants or expressions.</li>
-<li>If the function returns a result, it can be stored in a variable by preceding the function name with a variable name.</li>
-</ul>
-<p>Syntax:</p>
-<div class="highlight"><pre><span></span><span class="c1"># function with no input argument and returning nothing</span>
+<h3 id="How-to-call-functions?">How to call functions?<a class="anchor-link" href="#How-to-call-functions?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+    <span class="o">...</span>
+
+<span class="c1"># function with no input argument and returning nothing</span>
 <span class="n">function_name</span><span class="p">()</span>
 <span class="c1"># function with input arguments and returning nothing</span>
 <span class="n">function_name</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
@@ -12044,8 +12087,24 @@ Theses values can be constants or expressions.</li>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>To call a function, simply type its name followed by parentheses ().</li>
+<li>If the function requires input arguments, you need to provide values for them inside the parentheses. 
+Theses values can be constants or expressions.</li>
+<li>If the function returns a result, it can be stored in a variable by preceding the function name with a variable name.</li>
+</ul>
+
+</div>
+</div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12075,9 +12134,7 @@ Theses values can be constants or expressions.</li>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Have you tried to turn it off and on again?
@@ -12089,7 +12146,8 @@ Theses values can be constants or expressions.</li>
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12110,8 +12168,37 @@ Theses values can be constants or expressions.</li>
     
 <span class="c1"># call function &quot;it_helpdesk&quot; and pass a string as input argument</span>
 <span class="n">it_helpdesk</span><span class="p">(</span><span class="s2">&quot;My computer smells weird and is very hot&quot;</span><span class="p">)</span>
+</pre></div>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10 minutes later...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Thank you for your request for support concerning:
+My computer smells weird and is very hot
+Before we do anything, have you tried to turn it off and on again?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10 minutes later...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># call function &quot;it_helpdesk&quot; and a variable </span>
 <span class="c1"># (!) the name of the passed variable can be different from the name of the input argument</span>
@@ -12128,15 +12215,10 @@ Theses values can be constants or expressions.</li>
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Thank you for your request for support concerning:
-My computer smells weird and is very hot
-Before we do anything, have you tried to turn it off and on again?
-
+<pre>
 10 minutes later...
 
 Thank you for your request for support concerning:
@@ -12150,7 +12232,8 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12161,7 +12244,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">it_helpdesk</span><span class="p">():</span>
@@ -12181,9 +12264,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Have you tried to turn it off and on again?
@@ -12195,7 +12276,8 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12206,7 +12288,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">it_helpdesk</span><span class="p">(</span><span class="n">problem</span><span class="p">):</span>
@@ -12218,8 +12300,37 @@ Before we do anything, have you tried to turn it off and on again?
 <span class="c1"># call function &quot;it_helpdesk&quot; and pass a string as input argument</span>
 <span class="n">it_answer</span> <span class="o">=</span> <span class="n">it_helpdesk</span><span class="p">(</span><span class="s2">&quot;My computer smells weird and is very hot&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">it_answer</span><span class="p">)</span>
+</pre></div>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10 minutes later...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Thank you for your request for support concerning:
+My computer smells weird and is very hot
+Before we do anything, have you tried to turn it off and on again?
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">10 minutes later...</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># call function &quot;it_helpdesk&quot; and a variable </span>
 <span class="c1"># (!) the name of the passed variable can be different from the name of the input argument</span>
@@ -12237,15 +12348,10 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
 
-
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Thank you for your request for support concerning:
-My computer smells weird and is very hot
-Before we do anything, have you tried to turn it off and on again?
-
+<pre>
 10 minutes later...
 
 Thank you for your request for support concerning:
@@ -12259,7 +12365,8 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12270,7 +12377,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Note: this function already exists in Python</span>
@@ -12290,9 +12397,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2 1
@@ -12304,7 +12409,19 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Time-to-practice">Time to practice<a class="anchor-link" href="#Time-to-practice">&#182;</a></h3><p>Do exercices 1, 2, 3 and 4.</p>
+<p><img src="attachment:exo_1.jpg" alt="exo_1.jpg"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12315,7 +12432,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">can_i_trust_this_website</span><span class="p">(</span><span class="n">website</span><span class="p">,</span> <span class="n">country</span><span class="p">):</span>
@@ -12337,9 +12454,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>No! It&#39;s all fake news!
@@ -12350,8 +12465,9 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 </div>
 
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12362,7 +12478,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># call function can_i_trust_this_website and pass input arguments in reverse order</span>
@@ -12378,9 +12494,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>No! It&#39;s all fake news!
@@ -12391,8 +12505,9 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12403,7 +12518,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">can_i_trust_this_website</span><span class="p">(</span><span class="s2">&quot;http://www.plan.be&quot;</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s2">&quot;Belgium&quot;</span><span class="p">)</span>
@@ -12418,9 +12533,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>No! It&#39;s all fake news!
@@ -12431,8 +12544,9 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 </div>
 
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12443,7 +12557,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">can_i_trust_this_website</span><span class="p">(</span><span class="n">website</span><span class="o">=</span><span class="s2">&quot;http://www.plan.be&quot;</span><span class="p">,</span> <span class="s2">&quot;Belgium&quot;</span><span class="p">)</span>
@@ -12458,13 +12572,11 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-13-ea4a27a80b58&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-15-9e159a4e5cf9&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
 <span class="ansi-red-fg">    can_i_trust_this_website(website=&#34;http://www.plan.be&#34;, &#34;Belgium&#34;)</span>
                                                           ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> positional argument follows keyword argument
@@ -12475,8 +12587,20 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Time-to-practice">Time to practice<a class="anchor-link" href="#Time-to-practice">&#182;</a></h3><p>Do exercice 5.</p>
+<p><img src="attachment:exo_2.jpg" alt="exo_2.jpg"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12487,7 +12611,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">can_i_trust_this_website</span><span class="p">(</span><span class="n">website</span><span class="p">,</span> <span class="n">country</span><span class="o">=</span><span class="s1">&#39;Belgium&#39;</span><span class="p">):</span>
@@ -12509,9 +12633,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>No! It&#39;s all fake news!
@@ -12523,7 +12645,8 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12534,7 +12657,7 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wrong function definition --&gt; arguments with default values must always be placed at the end of the arguments list</span>
@@ -12556,13 +12679,11 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-15-85bf7bff3567&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">2</span>
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-17-af72b8fb7472&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">2</span>
 <span class="ansi-red-fg">    def can_i_trust_this_website(website=&#34;http://www.foxnews.com&#34;, country):</span>
                                 ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> non-default argument follows default argument
@@ -12574,18 +12695,19 @@ Before we do anything, have you tried to turn it off and on again?
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What about default value of <strong>mutable</strong> arguments like list, dictionary or array?</p>
+<p>What about default value of arguments of type list, dictionary or array (<em>mutable</em> objects)?</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Wrong function defintion --&gt; default value for mutable input arguments should be None and </span>
@@ -12596,10 +12718,8 @@ Before we do anything, have you tried to turn it off and on again?
 
 <span class="n">result_1</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_1</span><span class="p">)</span>
-
 <span class="n">result_2</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
-
 <span class="n">result_3</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
 </pre></div>
@@ -12613,9 +12733,7 @@ Before we do anything, have you tried to turn it off and on again?
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got: [1]
@@ -12629,7 +12747,8 @@ Expected [1]. Got: [1, 2, 3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12641,7 +12760,7 @@ Expected [1]. Got: [1, 2, 3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Right way</span>
@@ -12653,10 +12772,8 @@ Expected [1]. Got: [1, 2, 3]
 
 <span class="n">result_1</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_1</span><span class="p">)</span>
-
 <span class="n">result_2</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
-
 <span class="n">result_3</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
 </pre></div>
@@ -12670,9 +12787,7 @@ Expected [1]. Got: [1, 2, 3]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got: [1]
@@ -12686,7 +12801,8 @@ Expected [1]. Got: [3]
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12702,7 +12818,7 @@ Expected [1]. Got: [3]
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function_with_default_argument_value</span><span class="p">(</span><span class="n">positional_arg</span><span class="p">,</span> <span class="n">arg_with_default_value</span><span class="o">=</span><span class="s2">&quot;argument with a default value&quot;</span><span class="p">):</span>
@@ -12726,9 +12842,7 @@ Expected [1]. Got: [3]
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>positional arg passed as keyword argument
@@ -12745,7 +12859,19 @@ override default value
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Time-to-practice">Time to practice<a class="anchor-link" href="#Time-to-practice">&#182;</a></h3><p>Do exercice 6.</p>
+<p><img src="attachment:exo_3.jpg" alt="exo_3.jpg"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12756,7 +12882,7 @@ override default value
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">larray</span> <span class="k">import</span> <span class="n">ones</span>
@@ -12779,9 +12905,7 @@ override default value
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>age    0    1    2    3    4    5
@@ -12796,7 +12920,8 @@ total population: 6.0
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12811,7 +12936,7 @@ total population: 6.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function_with_arbitrary_positional_arguments</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
@@ -12830,9 +12955,7 @@ total population: 6.0
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(0, 1, 2, 3, 4)
@@ -12843,8 +12966,9 @@ total population: 6.0
 </div>
 </div>
 
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12857,7 +12981,7 @@ total population: 6.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">function_with_arbitrary_keyword_arguments</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
@@ -12876,9 +13000,7 @@ total population: 6.0
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>{&#39;firstname&#39;: &#39;Sarah&#39;, &#39;name&#39;: &#39;Connor&#39;, &#39;country&#39;: &#39;US&#39;}
@@ -12889,8 +13011,9 @@ total population: 6.0
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12901,7 +13024,7 @@ total population: 6.0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">larray</span> <span class="k">import</span> <span class="n">Axis</span><span class="p">,</span> <span class="n">Session</span><span class="p">,</span> <span class="n">ones</span>
@@ -12933,9 +13056,7 @@ total population: 6.0
 
 
 <div class="output_area">
-
 <div class="prompt"></div>
-
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Session(age, gender, country, pop_be, pop_by_age, pop_all)
@@ -12947,7 +13068,8 @@ total population: 6.0
 </div>
 
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12979,6 +13101,13 @@ require(
             controls: true,
             progress: true,
             history: true,
+            slideNumber: true,
+            overview: true,
+            width: "100%",
+	        height: "100%",
+	        margin: 0.02,
+	        minScale: 1,
+	        maxScale: 1,
 
             theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
             transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
