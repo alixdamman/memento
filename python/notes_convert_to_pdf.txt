@@ -1,0 +1,22 @@
+Option 0:
+---------
+Use decktape Python tool
+
+Option 1:
+---------
+Follow instructions in: https://github.com/hakimel/reveal.js#pdf-export
+
+In the browser, set "http://127.0.0.1:8000/<presentation>.slides.html?print-pdf"
+
+
+Option 2:
+---------
+for notebook containing images, do not try
+$jupyter nbconvert (...).ipynb --to pdf
+directly. It doesn't work.
+
+Instead: 
+1) run '$ jupyter nbconvert (...).ipynb --to latex'
+2) open the .tex file and remove 'attachment:' in each \includegraphics command
+3) run '$ xelatex (...).tex' 
+
