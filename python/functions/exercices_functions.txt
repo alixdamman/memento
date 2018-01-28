@@ -38,7 +38,7 @@ Exercise 3: make function "hello" return a string
 
 Exercice 4: create a function in a model script
 
-* open the module "model_to_function.py"
+* open the module "model_function.py"
 * create a function called 'projection' that reproduces the calculation done below comments "# start projection ..."
   The function has two arguments called 'initial_pop' and 'coef' and returns a new array containing the projected
   population.
