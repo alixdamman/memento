@@ -1,6 +1,11 @@
 Option 0:
 ---------
-Use decktape Python tool
+Use decktape project (you must have node.js and npm installed)
+
+$decktape reveal (...).slides.html (...).pdf
+
+Note: don't create the (...).slides.html with a local reveal.js folder
+
 
 Option 1:
 ---------
