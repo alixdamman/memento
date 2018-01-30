@@ -1,6 +1,6 @@
 # ====== How to define and call functions ======
 #
-# Exercice 4: create a function in a model script
+# Exercise 4: create a function in a model script
 #
 # * open the module "model_function.py"
 # * create a function called 'projection' that reproduces the calculation done below comments "# start projection ..."
