@@ -2,8 +2,8 @@
 #
 # Exercise 6: add an argument with a default value to the function "projection"
 #
-# * add a boolean argument "display" with default value set to "False"
-# * before returning the result in function "projection", start the viewer if "display" is "True"
+# * add a boolean argument display with default value set to False
+# * before returning the result in function "projection", start the viewer if display is True
 # * change calls to function "projection" so that it displays the result before it returns the result of projection
 
 
