@@ -12576,10 +12576,10 @@ Before we do anything, have you tried to turn it off and on again?
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-15-9e159a4e5cf9&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    can_i_trust_this_website(website=&#34;http://www.plan.be&#34;, &#34;Belgium&#34;)</span>
-<span class="ansi-white-intense-fg ansi-bold">                                                          ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> positional argument follows keyword argument
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-15-ea4a27a80b58&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">1</span>
+<span class="ansi-red-fg">    can_i_trust_this_website(website=&#34;http://www.plan.be&#34;, &#34;Belgium&#34;)</span>
+                                                          ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> positional argument follows keyword argument
 </pre>
 </div>
 </div>
@@ -12686,10 +12686,10 @@ Before we do anything, have you tried to turn it off and on again?
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-17-af72b8fb7472&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">2</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    def can_i_trust_this_website(website=&#34;http://www.foxnews.com&#34;, country):</span>
-<span class="ansi-white-intense-fg ansi-bold">                                ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> non-default argument follows default argument
+<span class="ansi-cyan-fg">  File </span><span class="ansi-green-fg">&#34;&lt;ipython-input-17-9f6e5ff0eef6&gt;&#34;</span><span class="ansi-cyan-fg">, line </span><span class="ansi-green-fg">3</span>
+<span class="ansi-red-fg">    def can_i_trust_this_website(website=&#34;http://www.foxnews.com&#34;, country):</span>
+                                ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> non-default argument follows default argument
 </pre>
 </div>
 </div>
@@ -12721,9 +12721,9 @@ Before we do anything, have you tried to turn it off and on again?
 <span class="n">result_1</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_1</span><span class="p">)</span>
 <span class="n">result_2</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [2]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
 <span class="n">result_3</span> <span class="o">=</span> <span class="n">new_list_wrong_way</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [3]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12741,8 +12741,8 @@ Before we do anything, have you tried to turn it off and on again?
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got: [1]
-Expected [1]. Got: [1, 2]
-Expected [1]. Got: [1, 2, 3]
+Expected [2]. Got: [1, 2]
+Expected [3]. Got: [1, 2, 3]
 </pre>
 </div>
 </div>
@@ -12776,9 +12776,9 @@ Expected [1]. Got: [1, 2, 3]
 <span class="n">result_1</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_1</span><span class="p">)</span>
 <span class="n">result_2</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [2]. Got:&#39;</span><span class="p">,</span> <span class="n">result_2</span><span class="p">)</span>
 <span class="n">result_3</span> <span class="o">=</span> <span class="n">new_list_right_way</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [1]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Expected [3]. Got:&#39;</span><span class="p">,</span> <span class="n">result_3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12796,8 +12796,8 @@ Expected [1]. Got: [1, 2, 3]
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Expected [1]. Got: [1]
-Expected [1]. Got: [2]
-Expected [1]. Got: [3]
+Expected [2]. Got: [2]
+Expected [3]. Got: [3]
 </pre>
 </div>
 </div>
@@ -13087,7 +13087,7 @@ total population: 6.0
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Session(age, gender, country, pop_all, pop_be, pop_by_age)
+<pre>Session(age, gender, country, pop_be, pop_by_age, pop_all)
 </pre>
 </div>
 </div>
