@@ -5,4 +5,19 @@ Exercise 0: create an new empty project
   You should have at least:
   - a directory /input with two Excel files,
   - a directory /output
-  - a module "..."
+  - a module "model_global_immutable.py"
+  - a module "model_global_arrays.py"
+
+# ====== Global immutable variables ======
+
+Exercise 1: There is something horribly wrong in the "model_global_immutable.py" script
+
+a) Find and explain what is wrong in it
+b) modify it so as it does what it is expected to do
+
+# ====== Global arrays variables ======
+
+Exercise 2: There is something horribly wrong in the "model_global_arrays.py" script
+
+a) Find and explain what is wrong in it
+b) modify it so as it does what it is expected to do
