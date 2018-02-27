@@ -41,7 +41,8 @@ Python variables
 **Rule 2**: variable assignments (i.e. using operator =) in a function
 create or act on local variables.
 
-**Rule 3**: if a local variable has the same name as a global one, using
+**Rule 3**: a local and a global variable with the same name can
+coexist. If a local variable has the same name as a global one, using
 the name will access the **local** variable (*variable shadowing*).
 
 .. code:: ipython3
@@ -309,8 +310,9 @@ What to remember?
 1. Functions have access to global variables.
 2. Variable assignments (i.e. using operator =) in a function create or
    act on local variables.
-3. if a local variable has the same name as a global one, using the name
-   will access the **local** variable (*variable shadowing*).
+3. A local and a global variable with the same name can coexist. If a
+   local variable has the same name as a global one, using the name will
+   access the **local** variable (*variable shadowing*).
 4. Input arguments are local variables. Use the **return** statement If
    you want to keep back your modifications after the call to the
    function.
@@ -324,6 +326,48 @@ What to remember?
 7. Modifying **elements** of a **mutable** input argument modify also
    the content of the variable passed to the function (e.g. pop[10:99] =
    0).
+
+Global Variables
+~~~~~~~~~~~~~~~~
+
+pro
+^^^
+
+cons
+^^^^
+
+-  **Variables Shadowing**: global variables can be shadowed by unwanted
+   local variables having the same name.
+-  **Low Readability**: you need to read the whole the program to
+   understand what it does.
+-  **Low Predictability**: global variables can be responsible for
+   unpredictable side-effects. The program does not crash but produces
+   wrong results silently.
+-  **Poor testing**: programs with global variables are hard to test
+   (especially in case of *spaghetti code*).
+-  **Multithreading**: using global variables in multithreads programs
+   can lead to *race conditions*.
+
+Local Variables
+~~~~~~~~~~~~~~~
+
+pro
+^^^
+
+-  **No Shadowed Variables**: since there are only local variables, no
+   risk of shadowing.
+-  **Divide and Rule**: make functions indepedent blocks of code.
+-  **Better Readability**: given the function name + input arguments +
+   returned variables (should be described in docstring), you get all
+   the information you need. Functions are like black-boxes with an
+   interface.
+-  **Better Predictability**: from a function call, you know what is in
+   and what is out.
+-  **Multithreading**: you can easily and safely run different scenarios
+   at the same time on different CPU's
+
+cons
+^^^^
 
 **TIPS**:
 
