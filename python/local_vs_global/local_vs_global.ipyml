@@ -304,6 +304,9 @@ cells:
     
     #### pro
     
+    - **Accessibility**: global variables are accessible everywhere (assuming they are imported from the module in which they are declared)
+    - **Typing**: No need to declare them as function arguments and to return them.
+    - **(PyCharm)**: putting the cursor on them shows their declaration.
     
     #### cons
     
@@ -311,7 +314,7 @@ cells:
     - **Low Readability**: you need to read the whole the program to understand what it does.
     - **Low Predictability**: global variables can be responsible for unpredictable side-effects. The program does not crash but produces wrong results silently. 
     - **Poor testing**: programs with global variables are hard to test (especially in case of *spaghetti code*). 
-    - **Multithreading**: using global variables in multithreads programs can lead to *race conditions*. 
+    - **Multithreading**: global variables make it much harder or sometimes impossible to allow a program (or parts of it) to run on multiple processors/cores. 
 
   metadata:
     slideshow:
@@ -322,24 +325,30 @@ cells:
     
     #### pro
     
-    - **No Shadowed Variables**: since there are only local variables, no risk of shadowing.
-    - **Divide and Rule**: make functions indepedent blocks of code.
-    - **Better Readability**: given the function name + input arguments + returned variables (should be described in docstring), you get all the information you need. Functions are like black-boxes with an interface.
-    - **Better Predictability**: from a function call, you know what is in and what is out.
-    - **Multithreading**: you can easily and safely run different scenarios at the same time on different CPU's
+    - since there are local variables, no risk of shadowing.
+    - **Divide and Conquer**: make functions indepedent blocks of code.
+    - given the function name + input arguments + returned variables (should be described in docstring), you get all the information you need. Functions are like black-boxes with an interface.
+    - from a function call, you know what is in and what is out.
+    - **Multithreading**: you can more easily and safely run different scenarios at the same time on different CPU's
     
     #### cons
+    
+    - variables must be declared as function arguments and returned if modified.
+    - variables must be passed to functions (if input) or stored (if output) at each function call.
+    - **(PyCharm)**: inside functions, PyCharm lose access to their declaration and cannot display it anymore.
 
   metadata:
     slideshow:
       slide_type: slide
 
 - markdown: |
-    **TIPS**: 
+    **Conclusion**: 
     
-    Global variables may be dangerous. When it is possible, write functions as **independent** blocks of code and pass any external variables you need to work with as input arguments. Use **return** statement to return your modifications.
+    Global variables may be dangerous. When it is possible, write functions as **independent** blocks of code and pass any external variables you need to work with as input arguments. Use return statement to return your modifications. 
+    However, it is usually OK to use global variables as *parameters* (read-only variables).
     
-    When you have to deal with many external variables (arrays), passing all of them as arguments may become cumbersome. In that case, remember that modifying **elements** of *mutable* variables does not create a new object. This behavior can be used to simplify function definitions but must be used carefully.
+    When you have to deal with many variables (arrays), passing them all the time as function arguments may become cumbersome. 
+    Indeed, modifying **elements** of a *mutable* global variable does not create a local one. It is then possible to write a model based on "global arrays". Although this simplifies the writing of functions and increase the speed of model development, it impacts the readability and predictability of the code and may lead to tricky side-effects hard to detect. Global variables must be used carefully.
 
   metadata:
     slideshow:
@@ -404,4 +413,3 @@ data:
             \ and array_2\n\narray_1 has not been modified:\nsex    F    M\n     0.0\
             \  0.0\n\narray_2 has been modified:\ncountry   be   fr   de\n         1.0\
             \  0.0  0.0\n"}]}]
-
