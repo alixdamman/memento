@@ -362,21 +362,21 @@ Local Variables
 pro
 ^^^
 
--  since there are local variables, no risk of shadowing.
--  **Divide and Conquer**: make functions indepedent blocks of code.
--  given the function name + input arguments + returned variables
+-  Since there are local variables, no risk of shadowing.
+-  **Divide and Conquer**: make functions independent blocks of code.
+-  Given the function name + input arguments + returned variables
    (should be described in docstring), you get all the information you
    need. Functions are like black-boxes with an interface.
--  from a function call, you know what is in and what is out.
+-  From a function call, you know what is in and what is out.
 -  **Multithreading**: you can more easily and safely run different
-   scenarios at the same time on different CPU's
+   scenarios at the same time on different CPU's.
 
 cons
 ^^^^
 
--  variables must be declared as function arguments and returned if
+-  Variables must be declared as function arguments and returned if
    modified.
--  variables must be passed to functions (if input) or stored (if
+-  Variables must be passed to functions (if input) or stored (if
    output) at each function call.
 -  **(PyCharm)**: inside functions, PyCharm lose access to their
    declaration and cannot display it anymore.
