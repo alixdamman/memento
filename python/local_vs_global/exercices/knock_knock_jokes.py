@@ -3,48 +3,62 @@
 # Exercise 1: knock knock jokes
 #
 # a) Find and explain what is wrong in the code below
-# b) Make it print the expected knock knock jokes without moving the "print(joke)" statements
-
-
-joke = ""
+# b) Modify the functions below so as the "print(joke)" statements print the expected output.
+#    - Do not move the print statement into functions
+#    - Do not remove functions
 
 # ======================================================== #
-def make_knock_knock_joke_1(answer):
-    joke = "Knock, knock.\n Who’s there?\n"
-    joke = joke + name + ", who?\n"
-    joke = joke + name + answer + "!"
-
-
+#                         VERSION 1                        #
+# ======================================================== #
+joke = ""
 name = "Harry"
-make_knock_knock_joke_1("up, it’s cold out here")
+rest_answer = "up, it’s cold out here"
+
+
+def make_knock_knock_joke_1():
+    joke = """Knock, knock.
+Who’s there?
+{name}, who?
+{name}{rest_answer}!""".format(name=name, rest_answer=rest_answer)
+
+
+make_knock_knock_joke_1()
 print("make_knock_knock_joke_1:")
 print(joke)
 
 # ======================================================== #
-def make_knock_knock_joke_2(joke, name, rest_answer):
-    joke = joke + name + ", who?\n"
-    joke = joke + name + rest_answer + "!"
+#                         VERSION 2                        #
+# ======================================================== #
+joke = """Knock, knock.
+Who’s there?
+{name}, who?
+{name}{rest_answer}!"""
+name = "Anee"
+rest_answer = "one you like"
 
 
-make_knock_knock_joke_2("Knock, knock.\n Who’s there?\n", "Anee", "one you like")
+def make_knock_knock_joke_2():
+    joke = joke.format(name=name, rest_answer=rest_answer)
+
+
+make_knock_knock_joke_2()
 print("make_knock_knock_joke_2:")
 print(joke)
 
-
-joke = "Knock, knock.\n Who’s there?\n"
-name = "Anee"
-answer = "one you like"
-make_knock_knock_joke_2(joke, name, answer)
-print("make_knock_knock_joke_2 (bis):")
-print(joke)
-
 # ======================================================== #
-joke = "Knock, knock.\n Who’s there?\n"
-def make_knock_knock_joke_3(rest_answer):
-    joke = joke + name + ", who?\n"
-    joke = joke + name + rest_answer + "!"
+#                         VERSION 3                        #
+# ======================================================== #
+def make_knock_knock_joke_3(joke, name, rest_answer):
+    joke = joke.format(name=name, rest_answer=rest_answer)
 
-name = "Justin"
-make_knock_knock_joke_3("time for dinner")
+
+joke = """Knock, knock.
+Who’s there?
+{name}, who?
+{name}{rest_answer}!"""
+name = "Anee"
+rest_answer = "one you like"
+make_knock_knock_joke_3(joke, name, rest_answer)
+
 print("make_knock_knock_joke_3:")
 print(joke)
