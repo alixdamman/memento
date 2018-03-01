@@ -1,9 +1,13 @@
 # ====== Global arrays ======
 #
-# Exercise 3: using arrays as global variables
+# Exercise 3: using global arrays in functions
 #
-# set to True the "run_function" flags below to run the different version of "fill_pop" functions.
-# If you chose well, the program should not crash
+# We propose 5 different functions to fill a global array "pop" with a given value.
+# Some are correct and some are not.
+# The use of different functions are activated through "run_function" flags.
+# The present exercise consists in setting to True the "run_function"
+# flags associated with correct ways of modifying global arrays inside a function.
+# If you don't choose well, the program will crash...
 
 from larray import *
 
@@ -28,7 +32,7 @@ if run_function_1:
         pop = full(AGE, fill_value)
 
     fill_pop_1(fill_value)
-    assert pop.equals(expected_pop), "version 1"
+    assert larray_equal(pop, expected_pop), "version 1 of fill_pop function is incorrect"
 
 
 # ================= VERSION 2 =================
@@ -39,7 +43,7 @@ if run_function_2:
         pop[:] = full(AGE, fill_value)
 
     fill_pop_2(fill_value)
-    assert pop.equals(expected_pop), "version 2"
+    assert larray_equal(pop, expected_pop), "version 2 of fill_pop function is incorrect"
 
 
 # ================= VERSION 3 =================
@@ -51,7 +55,7 @@ if run_function_3:
         return pop
 
     pop = fill_pop_3(fill_value)
-    assert pop.equals(expected_pop), "version 3"
+    assert larray_equal(pop, expected_pop), "version 3 of fill_pop function is incorrect"
 
 
 # ================= VERSION 4 =================
@@ -61,9 +65,8 @@ if run_function_4:
     def fill_pop_4(pop, fill_value):
         pop = full(AGE, fill_value)
 
-
     fill_pop_4(pop, fill_value)
-    assert pop.equals(expected_pop), "version 4"
+    assert larray_equal(pop, expected_pop), "version 4 of fill_pop function is incorrect"
 
 # ================= VERSION 5 =================
 if run_function_5:
@@ -72,6 +75,5 @@ if run_function_5:
     def fill_pop_5(pop, fill_value):
         pop[:] = full(AGE, fill_value)
 
-
     fill_pop_5(pop, fill_value)
-    assert pop.equals(expected_pop), "version 5"
+    assert larray_equal(pop, expected_pop), "version 5 of fill_pop function is incorrect"
