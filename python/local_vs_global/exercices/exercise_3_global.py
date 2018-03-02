@@ -1,13 +1,15 @@
-# ====== Global arrays ======
+# ====== Global array variables - Exercise 3 ======
+
+# Exercise 3: using global array variables in functions
 #
-# Exercise 3: using global arrays in functions
+#   We propose 5 different functions to fill a global array "pop" with a given value.
+#   Some are correct and some are not.
+#   The use of different functions are activated through "run_function" flags.
 #
-# We propose 5 different functions to fill a global array "pop" with a given value.
-# Some are correct and some are not.
-# The use of different functions are activated through "run_function" flags.
-# The present exercise consists in setting to True the "run_function"
-# flags associated with correct ways of modifying global arrays inside a function.
-# If you don't choose well, the program will crash...
+#   Set to True the "run_function" flags associated with correct ways of
+#   modifying global arrays inside a function.
+#   If you don't choose well, the program will crash...
+
 
 from larray import *
 

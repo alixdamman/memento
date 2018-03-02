@@ -1,9 +1,10 @@
-# ====== Global immutable variables ======
+# ====== Global non-array variables - Exercise 2 ======
+
+# Exercise 2: using global non-array variables in a model
 #
-# Exercise 1: There is something horribly wrong in this script
-#
-# a) Find and explain what is wrong in the code below
-# b) modify the code below so as it does what it is expected to do
+#   There is something terribly wrong in this script.
+#   a) Find and explain what is wrong in the code.
+#   b) Modify the code so as it does what it is expected to do.
 
 
 from larray import *

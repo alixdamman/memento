@@ -1,11 +1,15 @@
-# ====== Global immutable variables ======
+# ====== Global non-array variables - Exercise 1 ======
 #
 # Exercise 1: knock knock jokes
 #
-# a) Find and explain what is wrong in the code below
-# b) Modify the functions below so as the "print(joke)" statements print the expected output.
-#    - Do not move the print statement into functions
-#    - Do not remove functions
+#   a) This Python script is supposed to print 3 different "knock knock" jokes
+#      but there is something wrong in the code.
+#   b) Find and explain what is wrong in the code.
+#   b) Modify the functions so as the "print(joke)" statements print
+#      the "knock knock" jokes as expected.
+#      - Do not move the print statement into functions!
+#      - Do not remove functions!
+
 
 # ======================================================== #
 #                         VERSION 1                        #

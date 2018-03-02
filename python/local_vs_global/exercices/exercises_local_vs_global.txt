@@ -1,0 +1,55 @@
+Exercise 0: create an new empty project
+
+* create an empty project called “python_workshop” (in c:\usr\)
+* copy all files & directories from <desktop>/python_workshop/ to c:\usr\python_workshop.
+  You should have at least:
+  - a directory /input with two Excel files,
+  - a directory /output,
+  - 4 modules "exercise_X_global.py" where X = 1, 2, 3 and 4
+
+
+# ====== Global non-array variables - Exercise 1 ======
+
+Exercise 1: knock knock jokes
+
+  a) Open "exercise_1_global.py" module and read the code.
+     This Python script is supposed to print 3 different "knock knock" jokes
+     but there is something wrong in the code.
+  b) Find and explain what is wrong in the code.
+  b) Modify the functions so as the "print(joke)" statements print
+     the "knock knock" jokes as expected.
+     - Do not move the print statement into functions!
+     - Do not remove functions!
+
+
+# ====== Global non-array variables - Exercise 2 ======
+
+Exercise 2: using global non-array variables in a model
+
+  a) Open "exercise_2_global.py" module and read the code.
+     There is something terribly wrong in this script.
+  b) Find and explain what is wrong in the code.
+  c) Modify the code so as it does what it is expected to do.
+
+
+# ====== Global array variables - Exercise 3 ======
+
+Exercise 3: using global array variables in functions
+
+  a) Open "exercise_3_global.py" module and read the code.
+     We propose 5 different functions to fill a global array "pop" with a given value.
+     Some are correct and some are not.
+     The use of different functions are activated through "run_function" flags.
+  b) Set to True the "run_function" flags associated with correct ways of
+     modifying global arrays inside a function.
+     If you don't choose well, the program will crash...
+
+
+# ====== Global array variables - Exercise 4 ======
+
+Exercise 4: using global array variables in a model
+
+  a) Open "exercise_4_global.py" module and read the code.
+     There is something horribly wrong in this script.
+  b) Find and explain what is wrong in the code.
+  c) Modify the code so as it does what it is expected to do.
