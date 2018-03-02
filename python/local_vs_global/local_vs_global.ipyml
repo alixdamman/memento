@@ -16,7 +16,7 @@ cells:
 - markdown: |
     ### Python variables
     
-    ![python_global_local_vars.png](attachment:python_global_local_vars.png)
+    ![python_global_local_vars.png](./images/python_global_local_vars.png)
 
   metadata:
     slideshow:
@@ -138,6 +138,17 @@ cells:
     print(var)
 
   id: 4
+  metadata:
+    slideshow:
+      slide_type: slide
+
+- markdown: |
+    ### Time to practice
+    
+    Do exercises 1 and 2
+    
+    ![global_variables_meme_2.jpg](./images/global_variables_meme.jpg)
+
   metadata:
     slideshow:
       slide_type: slide
@@ -294,6 +305,17 @@ cells:
     5. Modifying **elements** of a **mutable** variable does not create a new local variable (e.g. pop[10:99] = 0).
     6. To change the whole content of an array without creating a new local one, add **[:]** next to the array (e.g. pop[:] = 0).
     7. Modifying **elements** of a **mutable** input argument modify also the content of the variable passed to the function (e.g. pop[10:99] = 0).
+
+  metadata:
+    slideshow:
+      slide_type: slide
+
+- markdown: |
+    ### Time to practice (mutable objects)
+    
+    Do exercises 3 and 4
+    
+    ![global_variables_meme_2.jpg](./images/global_variables_meme_2.jpg)
 
   metadata:
     slideshow:

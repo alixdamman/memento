@@ -15,7 +15,7 @@ within that function: it is *shadowed* by the local variable.
 Python variables
 ~~~~~~~~~~~~~~~~
 
-.. figure:: attachment:python_global_local_vars.png
+.. figure:: ./images/python_global_local_vars.png
    :alt: python\_global\_local\_vars.png
 
    python\_global\_local\_vars.png
@@ -137,6 +137,16 @@ the function:
 
     I'm an input argument and I'm local to the function
 
+
+Time to practice
+~~~~~~~~~~~~~~~~
+
+Do exercises 1 and 2
+
+.. figure:: ./images/global_variables_meme.jpg
+   :alt: global\_variables\_meme\_2.jpg
+
+   global\_variables\_meme\_2.jpg
 
 End of story? Nope.
 
@@ -326,6 +336,16 @@ What to remember?
 7. Modifying **elements** of a **mutable** input argument modify also
    the content of the variable passed to the function (e.g. pop[10:99] =
    0).
+
+Time to practice (mutable objects)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Do exercises 3 and 4
+
+.. figure:: ./images/global_variables_meme_2.jpg
+   :alt: global\_variables\_meme\_2.jpg
+
+   global\_variables\_meme\_2.jpg
 
 Global Variables
 ~~~~~~~~~~~~~~~~
