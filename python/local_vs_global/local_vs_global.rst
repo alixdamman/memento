@@ -15,7 +15,7 @@ within that function: it is *shadowed* by the local variable.
 Python variables
 ~~~~~~~~~~~~~~~~
 
-.. figure:: attachment:python_global_local_vars.png
+.. figure:: ./images/python_global_local_vars.png
    :alt: python\_global\_local\_vars.png
 
    python\_global\_local\_vars.png
@@ -41,7 +41,8 @@ Python variables
 **Rule 2**: variable assignments (i.e. using operator =) in a function
 create or act on local variables.
 
-**Rule 3**: if a local variable has the same name as a global one, using
+**Rule 3**: a local and a global variable with the same name can
+coexist. If a local variable has the same name as a global one, using
 the name will access the **local** variable (*variable shadowing*).
 
 .. code:: ipython3
@@ -51,7 +52,8 @@ the name will access the **local** variable (*variable shadowing*).
     def my_function():
         # create a local variable named 'var' 
         var = "I'm a local variable"
-        # if a local variable has the same name as a global one, Python will access the local variable
+        # if a local variable has the same name as a global one, 
+        # Python will access the local variable
         print(var)
         
     my_function()
@@ -72,9 +74,11 @@ Don't want to lose your modifications? Use the **return** statement:
     var = "I'm a global variable"
     
     def my_function():
-        # variable assignments (i.e. using operator =) in a function create or act on local variables
+        # variable assignments (i.e. using operator =) in a function 
+        # create or act on local variables
         var = "I'm a global variable and I have been modified"
-        # Don't want to lose your modifications? Use the return statement
+        # Don't want to lose your modifications? 
+        # Use the return statement
         return var
     
     # set new content to the variable 'var'
@@ -120,8 +124,8 @@ the function:
     var = "I'm a global variable"
     
     def my_function(var):
-        # modifications on input arguments are not kept after function call
-        # input arguments are local
+        # modifications on input arguments are not kept after 
+        # function call input arguments are local
         var = "I'm an input argument and I'm local to the function"
         # use return statement to keep back your modifications
         return var
@@ -136,6 +140,16 @@ the function:
 
     I'm an input argument and I'm local to the function
 
+
+Time to practice
+~~~~~~~~~~~~~~~~
+
+Do exercises 1 and 2
+
+.. figure:: ./images/global_variables_meme.jpg
+   :alt: global\_variables\_meme\_2.jpg
+
+   global\_variables\_meme\_2.jpg
 
 End of story? Nope.
 
@@ -160,18 +174,37 @@ dictionary, array, session, ...) does not create a new local variable:
     array_1 = zeros('sex = F,M')
     array_2 = ones('country = be,fr,de')
     
-    def my_function():
-        # assigning the whole array creates a new local array
-        array_1 = ones('sex = F,M')
-        # assigning a subset of an array does not create a local array
-        array_2['fr,de'] = 0
-    
+    print("original content of array_1 and array_2:\n")
     print("array_1:")
     print(array_1)
     print("\narray_2:")
     print(array_2)
+
+
+.. parsed-literal::
+
+    original content of array_1 and array_2:
     
-    print("\nlet's call 'my_function' and try to modify array_1 and array_2\n")
+    array_1:
+    sex    F    M
+         0.0  0.0
+    
+    array_2:
+    country   be   fr   de
+             1.0  1.0  1.0
+
+
+.. code:: ipython3
+
+    def my_function():
+        # assigning the whole array creates 
+        # a new local array
+        array_1 = ones('sex = F,M')
+        # assigning a subset of an array 
+        # does not create a local array
+        array_2['fr,de'] = 0
+    
+    print("\nlet's call 'my_function' and try to modify array_1 and array_2:\n")
     my_function()
     
     print("array_1 has not been modified:")
@@ -182,15 +215,8 @@ dictionary, array, session, ...) does not create a new local variable:
 
 .. parsed-literal::
 
-    array_1:
-    sex    F    M
-         0.0  0.0
     
-    array_2:
-    country   be   fr   de
-             1.0  1.0  1.0
-    
-    let's call 'my_function' and try to modify array_1 and array_2
+    let's call 'my_function' and try to modify array_1 and array_2:
     
     array_1 has not been modified:
     sex    F    M
@@ -220,12 +246,26 @@ new local one, add **[:]** next to the array:
     
     array_1 = zeros('sex = F,M')
     
-    def my_function():
-        # trick: to change to whole content of an array, add [:] next to the array
-        array_1[:] = ones('sex = F,M')
-    
+    print("original content of array_1:\n")
     print("array_1:")
     print(array_1)
+
+
+.. parsed-literal::
+
+    original content of array_1:
+    
+    array_1:
+    sex    F    M
+         0.0  0.0
+
+
+.. code:: ipython3
+
+    def my_function():
+        # trick: to change to whole content of an array, 
+        # add [:] next to the array
+        array_1[:] = ones('sex = F,M')
     
     print("\nlet's call 'my_function' and try to modify the whole content of array_1 using [:]\n")
     my_function()
@@ -236,9 +276,6 @@ new local one, add **[:]** next to the array:
 
 .. parsed-literal::
 
-    array_1:
-    sex    F    M
-         0.0  0.0
     
     let's call 'my_function' and try to modify the whole content of array_1 using [:]
     
@@ -260,16 +297,33 @@ associated variable passed to the function:
     array_1 = zeros('sex = F,M')
     array_2 = ones('country = be,fr,de')
     
+    print("original content of array_1 and array_2:\n")  
+    print("array_1:")
+    print(array_1)
+    print("\narray_2:")
+    print(array_2)
+
+
+.. parsed-literal::
+
+    original content of array_1 and array_2:
+    
+    array_1:
+    sex    F    M
+         0.0  0.0
+    
+    array_2:
+    country   be   fr   de
+             1.0  1.0  1.0
+
+
+.. code:: ipython3
+
     def my_function(arr_1, arr_2):
         # assigning the whole array creates a new array
         arr_1 = ones('sex = F,M')
         # assigning a subset of an array does not create a new array
         arr_2['fr,de'] = 0
-    
-    print("array_1:")
-    print(array_1)
-    print("\narray_2:")
-    print(array_2)
     
     print("\nlet's call 'my_function' and try to modify array_1 and array_2\n")
     my_function(array_1, array_2)
@@ -282,13 +336,6 @@ associated variable passed to the function:
 
 .. parsed-literal::
 
-    array_1:
-    sex    F    M
-         0.0  0.0
-    
-    array_2:
-    country   be   fr   de
-             1.0  1.0  1.0
     
     let's call 'my_function' and try to modify array_1 and array_2
     
@@ -309,11 +356,15 @@ What to remember?
 1. Functions have access to global variables.
 2. Variable assignments (i.e. using operator =) in a function create or
    act on local variables.
-3. if a local variable has the same name as a global one, using the name
-   will access the **local** variable (*variable shadowing*).
+3. A local and a global variable with the same name can coexist. If a
+   local variable has the same name as a global one, using the name will
+   access the **local** variable (*variable shadowing*).
 4. Input arguments are local variables. Use the **return** statement If
    you want to keep back your modifications after the call to the
    function.
+
+What to remember?
+~~~~~~~~~~~~~~~~~
 
 **For mutable objects (list, dict, Axes, LArray, Session, ...)**:
 
@@ -325,15 +376,91 @@ What to remember?
    the content of the variable passed to the function (e.g. pop[10:99] =
    0).
 
-**TIPS**:
+Time to practice (mutable objects)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Do exercises 3 and 4
+
+.. figure:: ./images/global_variables_meme_2.jpg
+   :alt: global\_variables\_meme\_2.jpg
+
+   global\_variables\_meme\_2.jpg
+
+Global Variables
+~~~~~~~~~~~~~~~~
+
+pro
+^^^
+
+-  **Accessibility**: global variables are accessible everywhere
+   (assuming they are imported from the module in which they are
+   declared)
+-  **Typing**: No need to declare them as function arguments and to
+   return them.
+-  **(PyCharm)**: putting the cursor on them shows their declaration.
+
+Global Variables
+~~~~~~~~~~~~~~~~
+
+cons
+^^^^
+
+-  **Variables Shadowing**: global variables can be shadowed by unwanted
+   local variables having the same name.
+-  **Low Readability**: you need to read the whole the program to
+   understand what it does.
+-  **Low Predictability**: global variables can be responsible for
+   unpredictable side-effects. The program does not crash but produces
+   wrong results silently.
+-  **Poor testing**: programs with global variables are hard to test
+   (especially in case of *spaghetti code*).
+-  **Multithreading**: global variables make it much harder or sometimes
+   impossible to allow a program (or parts of it) to run on multiple
+   processors/cores.
+
+Local Variables
+~~~~~~~~~~~~~~~
+
+pro
+^^^
+
+-  Since there are local variables, no risk of shadowing.
+-  **Divide and Conquer**: make functions independent blocks of code.
+-  Given the function name + input arguments + returned variables
+   (should be described in docstring), you get all the information you
+   need. Functions are like black-boxes with an interface.
+-  From a function call, you know what is in and what is out.
+-  **Multithreading**: you can more easily and safely run different
+   scenarios at the same time on different CPU's.
+
+Local Variables
+~~~~~~~~~~~~~~~
+
+cons
+^^^^
+
+-  Variables must be declared as function arguments and returned if
+   modified.
+-  Variables must be passed to functions (if input) or stored (if
+   output) at each function call.
+-  **(PyCharm)**: inside functions, PyCharm lose access to their
+   declaration and cannot display it anymore.
+
+**Conclusion**:
 
 Global variables may be dangerous. When it is possible, write functions
 as **independent** blocks of code and pass any external variables you
-need to work with as input arguments. Use **return** statement to return
-your modifications.
+need to work with as input arguments. Use return statement to return
+your modifications. However, it is usually OK to use global variables as
+*parameters* (read-only variables).
 
-When you have to deal with many external variables (arrays), passing all
-of them as arguments may become cumbersome. In that case, remember that
-modifying **elements** of *mutable* variables does not create a new
-object. This behavior can be used to simplify function definitions but
+**Conclusion**:
+
+When you have to deal with many variables (arrays), passing them all the
+time as function arguments may become cumbersome. Indeed, modifying
+**elements** of a *mutable* global variable does not create a local one.
+It is then possible to write a model based on "global arrays". Although
+this simplifies the writing of functions and increase the speed of model
+development, it impacts the readability and predictability of the code
+and may lead to tricky side-effects hard to detect. Global variables
 must be used carefully.
